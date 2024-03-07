@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second Page</title>
+
+
+  <script>
+    function toggleImage() { // includes () returns a specified string
+      var imageElement = document.getElementById("mainImage");
+      var currentImage = imageElement.src;
+
+      var originalImage = "images/akap1.PNG"; // image 1 or original image
+      var newImage = "images/akap2.PNG"; // image 2 or image after original image
+
+      if (currentImage.includes(originalImage)) {
+        imageElement.src = newImage;
+      } else {
+        imageElement.src = originalImage;
+      }
+    }
+
+</script> 
+</head>
+
+<body>
+  <h1>Welcome to the Second Page</h1>
+
+  <!-- Image that is being toggled -->
+  <img id="mainImage" src="images/akap1.PNG" alt="Main Image" width="300" height="200">
+
+  <!-- Buttons that toggle the image -->
+  <button onclick="toggleImage()">Change Image</button>
+  <button onclick="toggleImage()">Revert Image</button>
+</body>
+</html>
